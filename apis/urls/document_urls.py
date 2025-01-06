@@ -7,6 +7,6 @@ urlpatterns = [
     path('search/', views.searchDocuments, name="search_documents"),
     path('delete/', views.deleteDocuments, name="delete_documents"),
     path('update/<int:document_id>/', views.updateDocument, name="update_document"),
-    path('delete-all/', views.deleteAllDocuments, name="delete_all_documents"),
+    path('delete-all/', views.deleteAllDocuments, name="delete_all_documents"), 
     # path('document/<int:document_id>/', views.deleteDocument, name="delete_document"),
 ]

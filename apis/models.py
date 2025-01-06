@@ -9,4 +9,11 @@ class Document(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+class BankAccount(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    bank_name = models.CharField(max_length=255, null=True, blank=True)
+    money = models.FloatField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
 # Create your models here.

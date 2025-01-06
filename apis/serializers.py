@@ -2,7 +2,7 @@ from rest_framework import serializers
 from django.contrib.auth.models import User
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.conf import settings
-from .models import Document
+from .models import Document, BankAccount
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -112,5 +112,11 @@ class GetDocumentSerializer(serializers.ModelSerializer):
 
     def get_document(self, obj):
         return f"{settings.BASE_URL}{obj.document.url}"
+    
+class BankAccountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BankAccount
+        fields = '__all__'
+
 
 
