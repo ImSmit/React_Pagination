@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Home, FileText, Settings, User, BookOpen } from 'lucide-react'
+import { Home, FileText, User, BookOpen, Landmark } from 'lucide-react'
 import { useSelector } from "react-redux";
 const Sidebar = () => {
   const userInfo = useSelector(state => state.user)
@@ -24,6 +24,12 @@ const Sidebar = () => {
               <Link to="/documents" className="flex items-center space-x-2 p-2 rounded-lg hover:bg-[#000000] hover:text-white transition-colors">
                 <FileText size={20} />
                 <span>Documents</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/banks" className="flex items-center space-x-2 p-2 rounded-lg hover:bg-[#000000] hover:text-white transition-colors">
+                <Landmark size={20} />
+                <span>Banks</span>
               </Link>
             </li>
             {/* <li>

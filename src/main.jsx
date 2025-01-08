@@ -8,6 +8,7 @@ import Dashboard from "./screens/Dashboard.jsx";
 import Login from "./screens/Login.jsx";
 import Register from "./screens/Register.jsx";
 import Profile from "./screens/Profile.jsx";
+import Banks from "./screens/Banks.jsx";
 
 import { Provider } from "react-redux";
 import { store } from "./store";
@@ -23,11 +24,12 @@ const router = createBrowserRouter([
       {path: "/login",element: <Login />},
       {path: "/register",element: <Register />},
       {path: "/profile",element: <Profile />},
+      {path: "/banks",element: <Banks />},
     ],
   },
 ]);
 createRoot(document.getElementById("root")).render(
   <Provider store={store}>  
-  <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </Provider>
 );
